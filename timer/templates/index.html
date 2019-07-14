@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+<script>
+    var timing ={{ time_num }};
+    var t = {{ time_num }}
+</script>
+<script type="text/javascript" src="{% static 'script.js' %}"let></script>
+<header>
+    <a href="/accounts/logout?next=/" class="logged" id="logout">loggout</a>
+    <h2 class="logged">You logged as {{ user }},</h2>
+
+</header>
+<div id="main">
+    <ul>
+    <li><input value="" type="button" id="start"></li>
+    <li><p id="time">{{ time_text }}</p></li>
+    <li><input value="" type="button" id="restart"></li>
+    </ul>
+    <p>You were active today for {{ activ }} minute</p>
+</div>
+</body>
+</html>
