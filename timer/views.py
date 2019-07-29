@@ -8,7 +8,7 @@ def main(request):
     if request.user.is_authenticated != True:
         return redirect('/accounts/login')
 
-    minute_time = 25
+    minute_time = 1
     today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
     today_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
     try:
